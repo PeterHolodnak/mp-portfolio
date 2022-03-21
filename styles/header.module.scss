@@ -1,0 +1,32 @@
+.header {
+    padding: 16px 0;
+    nav {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    a {
+        display: block;
+        padding: 8px 24px;
+    }
+}
+
+$header: 70px;
+
+.header {
+    position: fixed;
+    z-index: 100;
+    height: $header;
+    background: #fff;
+    top: 0;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 25px rgba(0, 0, 0, 0.1);
+}
+.headerHide {
+    transform: translateY(-100%);
+}
+
+.main {
+    padding-top: $header;
+}
