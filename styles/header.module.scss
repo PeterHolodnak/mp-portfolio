@@ -8,6 +8,9 @@
     a {
         display: block;
         padding: 8px 24px;
+        &:first-child {
+            padding-left: 0;
+        }
     }
 }
 

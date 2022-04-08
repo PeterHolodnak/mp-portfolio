@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-import "../styles/globals.css";
+import "../styles/globals.scss";
 import styles from "../styles/header.module.scss";
 
 const Layout = ({ children }) => {
@@ -57,7 +57,7 @@ const Layout = ({ children }) => {
             <header
                 className={`${styles.header} ${hide ? styles.headerHide : ""}`}
             >
-                <nav>
+                <nav className="container">
                     <Link href="/">
                         <a>Prehľad</a>
                     </Link>

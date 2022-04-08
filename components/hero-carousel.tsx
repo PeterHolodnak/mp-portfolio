@@ -5,15 +5,15 @@ export default function HeroCarousel() {
     const items = [
         {
             text: "Chutnučké kuchyne",
-            image: "/kitchen.webp",
+            image: "/images/carousel/kitchen.webp",
         },
         {
             text: "Krásne stolíky",
-            image: "/table.webp",
+            image: "/images/carousel/table.webp",
         },
         {
             text: "Sexy bazény",
-            image: "/pool.jpg",
+            image: "/images/carousel/pool.jpg",
         },
     ];
 
@@ -39,7 +39,9 @@ export default function HeroCarousel() {
                     }`}
                     style={{ backgroundImage: `url("${item.image}")` }}
                 >
-                    <h1 className={styles.text}>{item.text}</h1>
+                    <div className={`container ${styles.itemContainer}`}>
+                        <h1 className={styles.text}>{item.text}</h1>
+                    </div>
                 </div>
             ))}
         </div>
