@@ -9,7 +9,7 @@ type CardProps = {
 
 export default function Cards({ items }: { items: CardProps[] }) {
     return (
-        <div className="container floor">
+        <section className="container floor">
             <div className={styles.cards}>
                 {items.map((item, i) => (
                     <div key={i} className={styles.card}>
@@ -25,6 +25,6 @@ export default function Cards({ items }: { items: CardProps[] }) {
                     </div>
                 ))}
             </div>
-        </div>
+        </section>
     );
 }

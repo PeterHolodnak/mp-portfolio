@@ -30,7 +30,7 @@ export default function HeroCarousel() {
     }, [activeIndex]);
 
     return (
-        <div className={styles.carousel}>
+        <section className={styles.carousel}>
             {items.map((item, index) => (
                 <div
                     key={index}
@@ -44,6 +44,6 @@ export default function HeroCarousel() {
                     </div>
                 </div>
             ))}
-        </div>
+        </section>
     );
 }

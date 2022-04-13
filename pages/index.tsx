@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Cards from "../components/cards";
+import Gallery from "../components/gallery";
 import HeroCarousel from "../components/hero-carousel";
 
 const Home: NextPage = () => {
@@ -23,6 +24,14 @@ const Home: NextPage = () => {
                         text: "A keby som to náhodou vyrobil zle, tak to potom opravím 🦾",
                         imageUrl: "/images/cards/maintenance.png",
                     },
+                ]}
+            />
+            <Gallery
+                title="Kukaj čo som vyrobil"
+                images={[
+                    "/images/carousel/kitchen.webp",
+                    "/images/carousel/pool.jpg",
+                    "/images/carousel/table.webp",
                 ]}
             />
         </>
