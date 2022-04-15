@@ -1,6 +1,6 @@
 @use "/styles/mixins";
+@use "/styles/variables";
 
-$spacing: 32px;
 .embla {
     overflow: hidden;
 }
@@ -8,7 +8,7 @@ $spacing: 32px;
 .emblaContainer {
     display: flex;
     @include mixins.desktop {
-        margin-left: -$spacing;
+        margin-left: calc(variables.$spacing * -1);
     }
 }
 
@@ -17,7 +17,7 @@ $spacing: 32px;
     min-width: 100%;
     @include mixins.desktop {
         min-width: 50%;
-        padding-left: $spacing;
+        padding-left: variables.$spacing;
     }
 }
 

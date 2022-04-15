@@ -1,5 +1,12 @@
 @use "/styles/mixins";
 
+:root {
+    --spacing: 16px;
+    @include mixins.desktop {
+        --spacing: 32px;
+    }
+}
+
 html,
 body {
     padding: 0;

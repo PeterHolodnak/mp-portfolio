@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Cards from "../components/cards";
+import Contact from "../components/contact";
 import Gallery from "../components/gallery";
 import HeroCarousel from "../components/hero-carousel";
 
@@ -37,6 +38,7 @@ const Home: NextPage = () => {
                     "/images/gallery/6.jpg",
                 ]}
             />
+            <Contact />
         </>
     );
 };

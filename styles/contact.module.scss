@@ -1,0 +1,30 @@
+@use "/styles/mixins";
+@use "/styles/variables";
+
+.contact {
+    display: grid;
+    text-align: center;
+    @include mixins.desktop {
+        text-align: left;
+        grid-template-columns: 1fr 1fr;
+    }
+    gap: variables.$spacing;
+}
+
+.contactRow {
+    margin-bottom: variables.$spacing;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mixins.desktop {
+        justify-content: flex-start;
+    }
+
+    a {
+        margin-left: variables.$spacing;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
