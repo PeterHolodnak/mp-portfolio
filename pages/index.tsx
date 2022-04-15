@@ -29,9 +29,12 @@ const Home: NextPage = () => {
             <Gallery
                 title="Kukaj čo som vyrobil"
                 images={[
-                    "/images/carousel/kitchen.webp",
-                    "/images/carousel/pool.jpg",
-                    "/images/carousel/table.webp",
+                    "/images/gallery/1.jpg",
+                    "/images/gallery/2.jpg",
+                    "/images/gallery/3.jpg",
+                    "/images/gallery/4.jpg",
+                    "/images/gallery/5.jpg",
+                    "/images/gallery/6.jpg",
                 ]}
             />
         </>

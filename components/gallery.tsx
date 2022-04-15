@@ -1,6 +1,8 @@
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, MouseEvent } from "react";
+import FsLightbox from "fslightbox-react";
+
 import styles from "../styles/gallery.module.scss";
 
 type GalleryProps = {
@@ -34,17 +36,50 @@ export default function Gallery(props: GalleryProps) {
         embla.on("select", onSelect);
     }, [embla, onSelect]);
 
+    const [lightboxController, setLightboxController] = useState({
+        toggler: false,
+        slide: 1,
+    });
+
+    function openLightboxOnSlide(number: number) {
+        setLightboxController({
+            toggler: !lightboxController.toggler,
+            slide: number,
+        });
+    }
+
+    const [mouseDownPosition, setMouseDownPosition] = useState(0);
+
+    const handleMouseDown = (event: MouseEvent<HTMLDivElement>) => {
+        setMouseDownPosition(event.clientX);
+    };
+
+    const handleMouseUp = (event: MouseEvent, index: number) => {
+        if (event.clientX !== mouseDownPosition) return;
+
+        openLightboxOnSlide(index);
+    };
+
     return (
         <section className="floor">
             <div className="container">
                 <h1>{props.title}</h1>
             </div>
+
             <div className={styles.galleryWrapper}>
                 <div className={styles.embla} ref={emblaCarousel}>
                     <div className={styles.emblaContainer}>
                         {props.images.map((image, index) => (
                             <div key={index} className={styles.emblaSlide}>
-                                <div className={styles.image}>
+                                <div
+                                    onMouseDown={(event) =>
+                                        handleMouseDown(event)
+                                    }
+                                    onMouseUp={(event) =>
+                                        handleMouseUp(event, index + 1)
+                                    }
+                                    className={styles.image}
+                                >
                                     <Image src={image} alt="" layout="fill" />
                                 </div>
                             </div>
@@ -66,6 +101,12 @@ export default function Gallery(props: GalleryProps) {
                     }`}
                 />
             </div>
+
+            <FsLightbox
+                toggler={lightboxController.toggler}
+                slide={lightboxController.slide}
+                sources={props.images}
+            />
         </section>
     );
 }

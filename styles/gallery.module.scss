@@ -1,3 +1,5 @@
+@use "/styles/mixins";
+
 $spacing: 32px;
 .embla {
     overflow: hidden;
@@ -5,19 +7,27 @@ $spacing: 32px;
 
 .emblaContainer {
     display: flex;
-    margin-left: -$spacing;
+    @include mixins.desktop {
+        margin-left: -$spacing;
+    }
 }
 
 .emblaSlide {
     position: relative;
-    min-width: 50%;
-    padding-left: $spacing;
+    min-width: 100%;
+    @include mixins.desktop {
+        min-width: 50%;
+        padding-left: $spacing;
+    }
 }
 
 .image {
-    height: 400px;
     position: relative;
-    cursor: grab;
+    cursor: pointer;
+    height: 200px;
+    @include mixins.desktop {
+        height: 500px;
+    }
     img {
         object-fit: cover;
     }
@@ -35,11 +45,13 @@ $spacing: 32px;
 
 .button {
     position: absolute;
-    width: 80px;
+    width: 40px;
+    @include mixins.desktop {
+        width: 80px;
+    }
     height: 100%;
     top: 0;
     background-color: rgba(#000000, 0.7);
-    opacity: 0;
     transition: opacity 0.2s linear;
     border: 0;
     outline: none;
@@ -52,6 +64,20 @@ $spacing: 32px;
         position: absolute;
         top: 50%;
         left: 50%;
+    }
+
+    opacity: 0;
+    &.buttonEnabled {
+        opacity: 1;
+    }
+
+    @include mixins.desktop {
+        @media (hover: hover) {
+            opacity: 0;
+            &.buttonEnabled {
+                opacity: 0;
+            }
+        }
     }
 }
 
