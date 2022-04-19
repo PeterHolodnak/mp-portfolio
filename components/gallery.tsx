@@ -7,10 +7,14 @@ import styles from "../styles/gallery.module.scss";
 
 type GalleryProps = {
     title: string;
-    images: string[];
 };
 
 export default function Gallery(props: GalleryProps) {
+    const images = require
+        .context("../public/images/gallery", true, /.*/)
+        ?.keys()
+        ?.map((name) => `/images/gallery/${name.replace("./", "")}`);
+
     const [emblaCarousel, embla] = useEmblaCarousel({
         align: "start",
         containScroll: "trimSnaps",
@@ -69,7 +73,7 @@ export default function Gallery(props: GalleryProps) {
             <div className={styles.galleryWrapper}>
                 <div className={styles.embla} ref={emblaCarousel}>
                     <div className={styles.emblaContainer}>
-                        {props.images.map((image, index) => (
+                        {images.map((image, index) => (
                             <div key={index} className={styles.emblaSlide}>
                                 <div
                                     onMouseDown={(event) =>
@@ -105,7 +109,7 @@ export default function Gallery(props: GalleryProps) {
             <FsLightbox
                 toggler={lightboxController.toggler}
                 slide={lightboxController.slide}
-                sources={props.images}
+                sources={images}
             />
         </section>
     );
