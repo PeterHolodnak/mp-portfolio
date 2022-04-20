@@ -1,8 +1,11 @@
 @use "/styles/mixins";
+@use "/styles/variables";
 
 :root {
     --spacing: 16px;
+    --floor-spacing: 32px;
     @include mixins.desktop {
+        --floor-spacing: 64px;
         --spacing: 32px;
     }
 }
@@ -42,10 +45,10 @@ a:hover {
 }
 
 .floor {
-    margin-bottom: 32px;
-    margin-top: 32px;
-    @include mixins.desktop {
-        margin-bottom: 64px;
-        margin-top: 64px;
-    }
+    margin-bottom: variables.$floor-spacing;
+    margin-top: variables.$floor-spacing;
+}
+
+h1 {
+    color: variables.$brown;
 }

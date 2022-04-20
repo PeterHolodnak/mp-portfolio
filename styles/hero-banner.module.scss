@@ -1,0 +1,59 @@
+@use "/styles/mixins";
+@use "/styles/variables";
+
+.wrapper {
+    position: relative;
+    height: 200px;
+    margin-bottom: calc(variables.$floor-spacing * -1 - 16px);
+    z-index: -1;
+    @include mixins.desktop {
+        height: 400px;
+        margin-bottom: calc(variables.$floor-spacing * -1 - 32px);
+    }
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    img {
+        object-fit: cover;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+            135deg,
+            variables.$brown 0%,
+            #ffffff00 80%
+        );
+        @include mixins.desktop {
+            background-image: linear-gradient(
+                180deg,
+                variables.$brown 0%,
+                #ffffff00 80%
+            );
+        }
+    }
+}
+
+.textContainer {
+    position: relative;
+}
+
+.text {
+    color: white;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    @include mixins.desktop {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

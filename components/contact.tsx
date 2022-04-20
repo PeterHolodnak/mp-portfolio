@@ -1,12 +1,6 @@
 import styles from "../styles/contact.module.scss";
 import Image from "next/image";
 
-type CardProps = {
-    title: string;
-    text: string;
-    imageUrl: string;
-};
-
 export default function Contact() {
     const mail = "mail@mail.mail";
     const phone = "+4219 123 456 789";
@@ -14,10 +8,9 @@ export default function Contact() {
     return (
         <section className="container floor">
             <div className={styles.contact}>
-                <div></div>
                 <div>
                     <h1>Kontakt</h1>
-                    <div className={styles.contactRow}>
+                    <div className={styles.rowFlex}>
                         <Image
                             src="/images/icons/mail.png"
                             alt="Mail"
@@ -26,7 +19,7 @@ export default function Contact() {
                         />
                         <a href={`mailto: ${mail}`}>{mail}</a>
                     </div>
-                    <div className={styles.contactRow}>
+                    <div className={styles.rowFlex}>
                         <Image
                             src="/images/icons/phone.png"
                             alt="Telefon"
@@ -37,7 +30,7 @@ export default function Contact() {
                             {phone}
                         </a>
                     </div>
-                    <div className={styles.contactRow}>
+                    <div className={styles.rowFlex}>
                         <Image
                             src="/images/icons/facebook.png"
                             alt="Facebook"
@@ -47,6 +40,21 @@ export default function Contact() {
                         <a href={`https://www.facebook.com/${mail}`}>
                             {facebook}
                         </a>
+                    </div>
+                </div>
+                <div>
+                    <h1>Fakturačné údaje</h1>
+                    <div className={styles.row}>
+                        <div className={styles.title}>Názov firmy</div>
+                        <div>Michal Palenčar - MINAB kuchyne na mieru</div>
+                    </div>
+                    <div className={styles.row}>
+                        <div className={styles.title}>IČO</div>
+                        <div>53614461</div>
+                    </div>
+                    <div className={styles.row}>
+                        <div className={styles.title}>Sídlo</div>
+                        <div>Ľubovec 94, 08242</div>
                     </div>
                 </div>
             </div>

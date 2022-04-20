@@ -11,8 +11,15 @@
     gap: variables.$spacing;
 }
 
-.contactRow {
+.row {
     margin-bottom: variables.$spacing;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.rowFlex {
+    @extend .row;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,8 +30,9 @@
     a {
         margin-left: variables.$spacing;
     }
+}
 
-    &:last-child {
-        margin-bottom: 0;
-    }
+.title {
+    font-weight: 700;
+    margin-bottom: 8px;
 }
