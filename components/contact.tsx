@@ -26,9 +26,7 @@ export default function Contact() {
                             width="50"
                             height="50"
                         />
-                        <a href={`tel: ${phone.replaceAll(" ", "")}`}>
-                            {phone}
-                        </a>
+                        <a href={`tel: ${phone.replace(/\s/g, "")}`}>{phone}</a>
                     </div>
                     <div className={styles.rowFlex}>
                         <Image
