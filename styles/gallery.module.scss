@@ -16,7 +16,7 @@
     position: relative;
     min-width: 100%;
     @include mixins.desktop {
-        min-width: 50%;
+        min-width: 25%;
         padding-left: variables.$spacing;
     }
 }
@@ -26,7 +26,7 @@
     cursor: pointer;
     height: 200px;
     @include mixins.desktop {
-        height: 500px;
+        height: 200px;
     }
     img {
         object-fit: cover;
