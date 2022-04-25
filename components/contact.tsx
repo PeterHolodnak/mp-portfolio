@@ -11,30 +11,48 @@ export default function Contact() {
                 <div>
                     <h1>Kontakt</h1>
                     <div className={styles.rowFlex}>
-                        <Image
+                        <img
                             src="/images/icons/mail.png"
                             alt="Mail"
                             width="50"
                             height="50"
                         />
+                        {/* <Image
+                            src="/images/icons/mail.png"
+                            alt="Mail"
+                            width="50"
+                            height="50"
+                        /> */}
                         <a href={`mailto: ${mail}`}>{mail}</a>
                     </div>
                     <div className={styles.rowFlex}>
-                        <Image
+                        <img
                             src="/images/icons/phone.png"
                             alt="Telefon"
                             width="50"
                             height="50"
                         />
+                        {/* <Image
+                            src="/images/icons/phone.png"
+                            alt="Telefon"
+                            width="50"
+                            height="50"
+                        /> */}
                         <a href={`tel: ${phone.replace(/\s/g, "")}`}>{phone}</a>
                     </div>
                     <div className={styles.rowFlex}>
-                        <Image
+                        <img
                             src="/images/icons/facebook.png"
                             alt="Facebook"
                             width="50"
                             height="50"
                         />
+                        {/* <Image
+                            src="/images/icons/facebook.png"
+                            alt="Facebook"
+                            width="50"
+                            height="50"
+                        /> */}
                         <a href={`https://www.facebook.com/${mail}`}>
                             {facebook}
                         </a>

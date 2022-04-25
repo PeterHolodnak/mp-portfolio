@@ -10,7 +10,8 @@ export default function HeroBanner(props: HeroBannerProps) {
     return (
         <section className={styles.wrapper}>
             <div className={styles.bg}>
-                <Image src={props.image} alt="" layout="fill" />
+                <img src={props.image} alt="" />
+                {/* <Image src={props.image} alt="" layout="fill" /> */}
             </div>
             <div className="container">
                 <div className={styles.textContainer}>

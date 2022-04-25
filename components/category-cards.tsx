@@ -18,12 +18,17 @@ export default function CategoryCards({
                 {items.map((item, i) => (
                     <div key={i} className={styles.card}>
                         <div className={styles.imageWrapper}>
-                            <Image
+                            <img
+                                src={item.image}
+                                alt=""
+                                className={styles.image}
+                            />
+                            {/* <Image
                                 src={item.image}
                                 alt=""
                                 layout="fill"
                                 className={styles.image}
-                            />
+                            /> */}
                         </div>
                         <div className={styles.content}>
                             <div className={styles.items}>

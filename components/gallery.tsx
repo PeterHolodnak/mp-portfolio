@@ -84,7 +84,8 @@ export default function Gallery(props: GalleryProps) {
                                     }
                                     className={styles.image}
                                 >
-                                    <Image src={image} alt="" layout="fill" />
+                                    <img src={image} alt="" />
+                                    {/* <Image src={image} alt="" layout="fill" /> */}
                                 </div>
                             </div>
                         ))}

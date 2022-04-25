@@ -13,13 +13,20 @@ export default function Cards({ items }: { items: CardProps[] }) {
             <div className={styles.cards}>
                 {items.map((item, i) => (
                     <div key={i} className={styles.card}>
-                        <Image
+                        <img
+                            src={item.imageUrl}
+                            alt=""
+                            className={styles.image}
+                            width="60"
+                            height="60"
+                        />
+                        {/* <Image
                             src={item.imageUrl}
                             alt=""
                             width={60}
                             height={60}
                             className={styles.image}
-                        />
+                        /> */}
                         <h2>{item.title}</h2>
                         <div>{item.text}</div>
                     </div>
