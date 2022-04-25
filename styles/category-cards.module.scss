@@ -29,11 +29,7 @@
             opacity: 1;
         }
         .imageWrapper::after {
-            background-image: linear-gradient(
-                0deg,
-                variables.$brown 0%,
-                #ffffff00 120%
-            );
+            transform: scaleY(1.5);
         }
     }
 }
@@ -49,21 +45,21 @@
     &::after {
         content: "";
         position: absolute;
-        top: 0;
+        bottom: 0;
         left: 0;
         width: 100%;
         height: 100%;
         background-image: linear-gradient(
             0deg,
             variables.$brown 0%,
-            #ffffff00 120%
+            #ffffff00 100%
         );
+        transform: scaleY(1.5);
+        transform-origin: bottom;
         @media (hover: hover) {
-            background-image: linear-gradient(
-                0deg,
-                variables.$brown 0%,
-                #ffffff00 40%
-            );
+            transform: scaleY(0.3);
+            will-change: transform;
+            transition: transform 0.2s ease;
         }
     }
 }
