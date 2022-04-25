@@ -27,7 +27,7 @@ export default function HeroCarousel() {
                 setActiveIndex(activeIndex + 1);
             }
         }, 4321);
-    }, [activeIndex]);
+    }, [activeIndex, items.length]);
 
     return (
         <section className={styles.carousel}>

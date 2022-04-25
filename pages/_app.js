@@ -65,7 +65,7 @@ const Layout = ({ children }) => {
                         <a>Bazény</a>
                     </Link>
                     <Link href="/nabytok">
-                        <a href="/nabytok">Nábytok</a>
+                        <a>Nábytok</a>
                     </Link>
                     <Link href="/kuchyne">
                         <a>Kuchyne</a>
