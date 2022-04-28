@@ -59,7 +59,7 @@
         );
         transform: scaleY(1.5);
         transform-origin: bottom;
-        @media (hover: hover) {
+        @include mixins.hover {
             transform: scaleY(0.3);
             will-change: transform;
             transition: transform 0.2s ease;
@@ -86,7 +86,7 @@
     font-size: 20px;
 }
 .items {
-    @media (hover: hover) {
+    @include mixins.hover {
         opacity: 0;
         transition: opacity 0.2s ease;
     }

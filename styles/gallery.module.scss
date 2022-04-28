@@ -73,12 +73,10 @@
         opacity: 1;
     }
 
-    @include mixins.desktop {
-        @media (hover: hover) {
+    @include mixins.hover {
+        opacity: 0;
+        &.buttonEnabled {
             opacity: 0;
-            &.buttonEnabled {
-                opacity: 0;
-            }
         }
     }
 }
