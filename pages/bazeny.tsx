@@ -1,4 +1,6 @@
 import CategoryCards from "../components/category-cards";
+import Contact from "../components/contact";
+import Gallery from "../components/gallery";
 import HeroBanner from "../components/hero-banner";
 
 export default function Bazeny() {
@@ -27,6 +29,8 @@ export default function Bazeny() {
                     },
                 ]}
             />
+            <Gallery title="Už sa v nich len neutopiť" section="pool" />
+            <Contact />
         </>
     );
 }

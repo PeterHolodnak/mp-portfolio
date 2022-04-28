@@ -1,14 +1,15 @@
 import CategoryCards from "../components/category-cards";
+import Contact from "../components/contact";
+import Gallery from "../components/gallery";
+import HeroBanner from "../components/hero-banner";
 
 export default function Nábytok() {
     return (
-        <div>
-            <div>Nábytok na mieru</div>
-            <div>Chodbové zostavy</div>
-            <div>Kuchyne</div>
-            <div>Vstavaný nábytok</div>
-            <br />
-            <br />
+        <>
+            <HeroBanner
+                text="Nabytok z dreva a rohu jednorozča"
+                image="/images/banners/table.webp"
+            />
             <CategoryCards
                 items={[
                     {
@@ -38,6 +39,8 @@ export default function Nábytok() {
                     },
                 ]}
             />
-        </div>
+            <Gallery title="Najviac krásny nabytok" section="furniture" />
+            <Contact />
+        </>
     );
 }

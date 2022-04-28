@@ -27,7 +27,7 @@ const Home: NextPage = () => {
                     },
                 ]}
             />
-            <Gallery title="Kukaj čo som vyrobil" />
+            <Gallery title="Kukaj čo som vyrobil" section="home" />
             <Contact />
         </>
     );

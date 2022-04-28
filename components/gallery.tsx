@@ -1,18 +1,53 @@
 import useEmblaCarousel from "embla-carousel-react";
-import { useCallback, useEffect, useState, MouseEvent } from "react";
+import { useCallback, useEffect, useState, MouseEvent, useMemo } from "react";
 import FsLightbox from "fslightbox-react";
-
 import styles from "../styles/gallery.module.scss";
 
 type GalleryProps = {
     title: string;
+    section: "home" | "furniture" | "kitchen" | "pool";
 };
 
 export default function Gallery(props: GalleryProps) {
-    const images = require
-        .context("../public/images/gallery", true, /.*/)
-        ?.keys()
-        ?.map((name) => `/images/gallery/${name.replace("./", "")}`);
+    const images = useMemo(() => {
+        let imagesContext;
+        switch (props.section) {
+            case "furniture":
+                imagesContext = require.context(
+                    "../public/images/gallery/furniture",
+                    true,
+                    /.*/
+                );
+                break;
+            case "kitchen":
+                imagesContext = require.context(
+                    "../public/images/gallery/kitchen",
+                    true,
+                    /.*/
+                );
+                break;
+            case "pool":
+                imagesContext = require.context(
+                    "../public/images/gallery/pool",
+                    true,
+                    /.*/
+                );
+                break;
+            default:
+                imagesContext = require.context(
+                    "../public/images/gallery/home",
+                    true,
+                    /.*/
+                );
+        }
+
+        return imagesContext
+            ?.keys()
+            ?.map(
+                (name) =>
+                    `/images/gallery/${props.section}/${name.replace("./", "")}`
+            );
+    }, [props.section]);
 
     const [emblaCarousel, embla] = useEmblaCarousel({
         align: "start",
@@ -44,12 +79,15 @@ export default function Gallery(props: GalleryProps) {
         slide: 1,
     });
 
-    function openLightboxOnSlide(number: number) {
-        setLightboxController({
-            toggler: !lightboxController.toggler,
-            slide: number,
-        });
-    }
+    const openLightboxOnSlide = useCallback(
+        (number: number) => {
+            setLightboxController({
+                toggler: !lightboxController.toggler,
+                slide: number,
+            });
+        },
+        [lightboxController]
+    );
 
     const [mouseDownPosition, setMouseDownPosition] = useState(0);
 
