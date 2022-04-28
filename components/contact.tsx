@@ -1,5 +1,4 @@
 import styles from "../styles/contact.module.scss";
-import Image from "next/image";
 
 export default function Contact() {
     const mail = "mail@mail.mail";
@@ -17,12 +16,6 @@ export default function Contact() {
                             width="50"
                             height="50"
                         />
-                        {/* <Image
-                            src="/images/icons/mail.png"
-                            alt="Mail"
-                            width="50"
-                            height="50"
-                        /> */}
                         <a href={`mailto: ${mail}`}>{mail}</a>
                     </div>
                     <div className={styles.rowFlex}>
@@ -32,12 +25,6 @@ export default function Contact() {
                             width="50"
                             height="50"
                         />
-                        {/* <Image
-                            src="/images/icons/phone.png"
-                            alt="Telefon"
-                            width="50"
-                            height="50"
-                        /> */}
                         <a href={`tel: ${phone.replace(/\s/g, "")}`}>{phone}</a>
                     </div>
                     <div className={styles.rowFlex}>
@@ -47,12 +34,6 @@ export default function Contact() {
                             width="50"
                             height="50"
                         />
-                        {/* <Image
-                            src="/images/icons/facebook.png"
-                            alt="Facebook"
-                            width="50"
-                            height="50"
-                        /> */}
                         <a href={`https://www.facebook.com/${mail}`}>
                             {facebook}
                         </a>

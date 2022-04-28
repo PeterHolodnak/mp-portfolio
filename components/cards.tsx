@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "../styles/cards.module.scss";
 
 type CardProps = {
@@ -20,13 +19,6 @@ export default function Cards({ items }: { items: CardProps[] }) {
                             width="60"
                             height="60"
                         />
-                        {/* <Image
-                            src={item.imageUrl}
-                            alt=""
-                            width={60}
-                            height={60}
-                            className={styles.image}
-                        /> */}
                         <h2>{item.title}</h2>
                         <div>{item.text}</div>
                     </div>

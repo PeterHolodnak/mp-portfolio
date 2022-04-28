@@ -1,5 +1,4 @@
 import styles from "../styles/hero-banner.module.scss";
-import Image from "next/image";
 
 type HeroBannerProps = {
     text: string;
@@ -11,7 +10,6 @@ export default function HeroBanner(props: HeroBannerProps) {
         <section className={styles.wrapper}>
             <div className={styles.bg}>
                 <img src={props.image} alt="" />
-                {/* <Image src={props.image} alt="" layout="fill" /> */}
             </div>
             <div className="container">
                 <div className={styles.textContainer}>

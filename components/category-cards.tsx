@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "../styles/category-cards.module.scss";
 
 type CategoryCardProps = {
@@ -23,12 +22,6 @@ export default function CategoryCards({
                                 alt=""
                                 className={styles.image}
                             />
-                            {/* <Image
-                                src={item.image}
-                                alt=""
-                                layout="fill"
-                                className={styles.image}
-                            /> */}
                         </div>
                         <div className={styles.content}>
                             <div className={styles.items}>

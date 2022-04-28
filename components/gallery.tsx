@@ -1,5 +1,4 @@
 import useEmblaCarousel from "embla-carousel-react";
-import Image from "next/image";
 import { useCallback, useEffect, useState, MouseEvent } from "react";
 import FsLightbox from "fslightbox-react";
 
@@ -85,7 +84,6 @@ export default function Gallery(props: GalleryProps) {
                                     className={styles.image}
                                 >
                                     <img src={image} alt="" />
-                                    {/* <Image src={image} alt="" layout="fill" /> */}
                                 </div>
                             </div>
                         ))}
