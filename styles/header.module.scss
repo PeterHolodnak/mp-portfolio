@@ -1,35 +1,129 @@
+@use "/styles/variables";
+@use "/styles/mixins";
+
 .header {
     padding: 16px 0;
-    nav {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-    }
-    a {
-        display: block;
-        padding: 8px 24px;
-        &:first-child {
-            padding-left: 0;
-        }
-    }
-}
-
-$header: 70px;
-
-.header {
     position: fixed;
     z-index: 100;
-    height: $header;
+    height: variables.$header-height;
     background: #fff;
     top: 0;
     width: 100%;
     transition: all 0.3s ease;
     box-shadow: 0 1px 25px rgba(0, 0, 0, 0.1);
+
+    img {
+        object-fit: cover;
+        border-radius: 16px;
+        display: block;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include mixins.desktop {
+            justify-content: flex-start;
+        }
+    }
 }
+
 .headerHide {
     transform: translateY(-100%);
 }
 
-.main {
-    padding-top: $header;
+.items {
+    transform-origin: top center;
+    transform: scaleY(0);
+    height: 100vh;
+    transition: transform 0.2s ease;
+    will-change: transform;
+    &.expanded {
+        transform: scaleY(1);
+    }
+    background-color: white;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    @include mixins.desktop {
+        transform: none;
+        position: static;
+        height: auto;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    a {
+        display: block;
+        padding: 16px 24px;
+        border-bottom: 1px solid variables.$brown;
+        text-align: center;
+        @include mixins.desktop {
+            border-bottom: none;
+            padding: 8px 24px;
+            &:first-child {
+                padding-left: 24px * 2;
+            }
+        }
+    }
+}
+
+.btn {
+    @include mixins.desktop {
+        display: none;
+    }
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+    background-color: white;
+
+    div {
+        position: relative;
+        top: 0;
+        height: 4px;
+        background-color: variables.$brown;
+        margin-bottom: 12px;
+        transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width,
+            0.3s ease right;
+        border-radius: 2px;
+    }
+
+    div:first-child {
+        transform-origin: 0;
+    }
+
+    div:last-child {
+        margin-bottom: 0;
+        transform-origin: 40px;
+    }
+
+    div:nth-child(2) {
+        right: 0;
+        width: 40px;
+    }
+
+    &.active div:first-child {
+        top: -4px;
+        transform: rotateZ(45deg);
+    }
+
+    &.active div:last-child {
+        top: 4px;
+        transform: rotateZ(45deg);
+    }
+
+    &.active div:nth-child(2) {
+        width: 56px;
+        top: 0;
+        right: 8px;
+        transform: rotateZ(-45deg);
+    }
 }
