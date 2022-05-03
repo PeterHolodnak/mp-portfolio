@@ -34,7 +34,7 @@ export default function Contact() {
                             width="50"
                             height="50"
                         />
-                        <a href={`https://www.facebook.com/${mail}`}>
+                        <a href={`https://www.facebook.com/${facebook}`}>
                             {facebook}
                         </a>
                     </div>
