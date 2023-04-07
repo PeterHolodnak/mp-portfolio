@@ -16,29 +16,21 @@ export default function HeaderNavigation() {
         >
             <nav className="container">
                 <Link href="/">
-                    <a>
-                        <img
-                            src="/logo.webp"
-                            width={80}
-                            height={34}
-                            alt="Logo Minab"
-                        />
-                    </a>
+                    <img
+                        src="/logo.webp"
+                        width={80}
+                        height={34}
+                        alt="Logo Minab"
+                    />
                 </Link>
                 <div
                     className={`${styles.items}${
                         menuExpanded ? ` ${styles.expanded}` : ""
                     }`}
                 >
-                    <Link href="/bazeny">
-                        <a>Bazény</a>
-                    </Link>
-                    <Link href="/nabytok">
-                        <a>Nábytok</a>
-                    </Link>
-                    <Link href="/kuchyne">
-                        <a>Kuchyne</a>
-                    </Link>
+                    <Link href="/bazeny">Bazény</Link>
+                    <Link href="/nabytok">Nábytok</Link>
+                    <Link href="/kuchyne">Kuchyne</Link>
                 </div>
                 <button
                     type="button"
