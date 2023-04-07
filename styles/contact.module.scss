@@ -22,14 +22,17 @@
 }
 
 .row {
-    margin-bottom: variables.$spacing;
+    margin-bottom: calc(variables.$spacing / 2);
     &:last-child {
         margin-bottom: 0;
     }
 }
 
 .rowFlex {
-    @extend .row;
+    margin-bottom: variables.$spacing;
+    &:last-child {
+        margin-bottom: 0;
+    }
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,5 +47,5 @@
 
 .title {
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }

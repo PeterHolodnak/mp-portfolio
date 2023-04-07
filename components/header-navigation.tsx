@@ -18,7 +18,7 @@ export default function HeaderNavigation() {
                 <Link href="/">
                     <img
                         src="/logo.webp"
-                        width={80}
+                        width={100}
                         height={34}
                         alt="Logo Minab"
                     />
@@ -29,8 +29,10 @@ export default function HeaderNavigation() {
                     }`}
                 >
                     <Link href="/bazeny">Bazény</Link>
-                    <Link href="/nabytok">Nábytok</Link>
-                    <Link href="/kuchyne">Kuchyne</Link>
+                    <Link href="/zastresenia">Zastrešenia</Link>
+                    <Link href="/technologie">Technológie</Link>
+                    <Link href="/sluzby">Služby</Link>
+                    <Link href="/kontakt">Kontakt</Link>
                 </div>
                 <button
                     type="button"

@@ -5,30 +5,30 @@ import styles from "../styles/gallery.module.scss";
 
 type GalleryProps = {
     title: string;
-    section: "home" | "furniture" | "kitchen" | "pool";
+    section: "home" | "pools" | "roofs" | "technology";
 };
 
 export default function Gallery(props: GalleryProps) {
     const images = useMemo(() => {
         let imagesContext;
         switch (props.section) {
-            case "furniture":
+            case "pools":
                 imagesContext = require.context(
-                    "../public/images/gallery/furniture",
+                    "../public/images/gallery/pools",
                     true,
                     /.*/
                 );
                 break;
-            case "kitchen":
+            case "roofs":
                 imagesContext = require.context(
-                    "../public/images/gallery/kitchen",
+                    "../public/images/gallery/roofs",
                     true,
                     /.*/
                 );
                 break;
-            case "pool":
+            case "technology":
                 imagesContext = require.context(
-                    "../public/images/gallery/pool",
+                    "../public/images/gallery/technology",
                     true,
                     /.*/
                 );

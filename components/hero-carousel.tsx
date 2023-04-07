@@ -4,16 +4,19 @@ import styles from "../styles/hero-carousel.module.scss";
 export default function HeroCarousel() {
     const items = [
         {
-            text: "Chutnučké kuchyne",
-            image: "/images/carousel/kitchen.webp",
+            text: "Bazény",
+            image: "/images/gallery/pools/baz-8.webp",
+            size: 108,
         },
         {
-            text: "Krásne stolíky",
-            image: "/images/carousel/table.webp",
+            text: "Zastrešenia",
+            image: "/images/gallery/roofs/flat-1.webp",
+            posY: 75,
         },
         {
-            text: "Sexy bazény",
-            image: "/images/carousel/pool.jpg",
+            text: "Technológie",
+            image: "/images/gallery/technology/tech-7.webp",
+            posY: 30,
         },
     ];
 
@@ -37,7 +40,11 @@ export default function HeroCarousel() {
                     className={`${styles.item} ${
                         index == activeIndex ? styles.active : ""
                     }`}
-                    style={{ backgroundImage: `url("${item.image}")` }}
+                    style={{
+                        backgroundImage: `url("${item.image}")`,
+                        backgroundPositionY: `${item.posY ?? 50}%`,
+                        backgroundSize: item.size ? `${item.size}%` : "cover",
+                    }}
                 >
                     <div className={`container ${styles.itemContainer}`}>
                         <h1 className={styles.text}>{item.text}</h1>

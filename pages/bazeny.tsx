@@ -7,29 +7,37 @@ export default function Bazeny() {
     return (
         <>
             <HeroBanner
-                text="Stavané bazény a údržba"
-                image="/images/banners/pool.jpg"
+                text="Bazény na mieru"
+                image="/images/banners/pool.webp"
+                objectPositionY={40}
             />
             <CategoryCards
                 items={[
                     {
-                        title: "Montáž",
-                        image: "/images/category-cards/kitchen.webp",
-                        items: ["Vykopem", "Donesiem", "Zmontujem", "Postavím"],
+                        title: "Betónové bazény",
+                        image: "/images/gallery/pools/baz-8.webp",
+                        items: [
+                            "Dlhá životnosť",
+                            "Jednoduchá výmena fólie",
+                            "Nekonečné možnosti realizácie",
+                        ],
                     },
                     {
-                        title: "Údržba a servis",
-                        image: "/images/category-cards/pool.jpg",
-                        items: ["Udržím", "Zoservisujem"],
+                        title: "Sklolaminátové bazény",
+                        image: "/images/gallery/pools/baz-sklo.webp",
                     },
                     {
-                        title: "Montáž technológií",
-                        image: "/images/category-cards/table.webp",
-                        items: ["Donesiem", "Zmontujem", "Zapojím"],
+                        title: "Keramické bazény",
+                        image: "/images/category-cards/baz-keramicky.webp",
+                        items: [
+                            "Dlhá životnosť",
+                            "Jednoduchá údržba",
+                            "Krásne 3D farby",
+                        ],
                     },
                 ]}
             />
-            <Gallery title="Už sa v nich len neutopiť" section="pool" />
+            <Gallery title="Galéria" section="pools" />
             <Contact />
         </>
     );

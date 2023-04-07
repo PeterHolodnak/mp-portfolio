@@ -11,23 +11,28 @@ const Home: NextPage = () => {
             <Cards
                 items={[
                     {
-                        title: "Návrh",
-                        text: "Všetko krásne navrhnem",
-                        imageUrl: "/images/cards/design.png",
+                        title: "Konzultácie",
+                        text: "Priamo u Vás doma, vrátane zamerania",
+                        imageUrl: "/images/cards/ruler.svg",
                     },
                     {
-                        title: "Realizácia",
-                        text: "Potom všetko vlastnoručne vyrobím",
+                        title: "Cenová ponuka",
+                        text: "Šitá na mieru Vaším potrebám",
+                        imageUrl: "/images/cards/price.svg",
+                    },
+                    {
+                        title: "Realizácia a montáž",
+                        text: "Na kľúč od A do Z",
                         imageUrl: "/images/cards/build.jpg",
                     },
                     {
-                        title: "Údržba",
-                        text: "A keby som to náhodou vyrobil zle, tak to potom opravím 🦾",
+                        title: "Servis a údržba",
+                        text: "Čistá voda po celú sezónu",
                         imageUrl: "/images/cards/maintenance.png",
                     },
                 ]}
             />
-            <Gallery title="Kukaj čo som vyrobil" section="home" />
+            <Gallery title="Referencie" section="home" />
             <Contact />
         </>
     );

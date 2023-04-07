@@ -5,10 +5,12 @@
     position: relative;
     height: 200px;
     margin-bottom: calc(variables.$floor-spacing * -1 - 16px);
-    z-index: -1;
     @include mixins.desktop {
         height: 400px;
         margin-bottom: calc(variables.$floor-spacing * -1 - 32px);
+    }
+    + * {
+        z-index: 1;
     }
 }
 
@@ -52,7 +54,23 @@
 .text {
     color: white;
     position: absolute;
-    top: 40px;
+    text-transform: uppercase;
+    font-size: 32px;
+    top: 16px;
+    letter-spacing: 1px;
+    left: 0;
+    @include mixins.desktop {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.perex {
+    color: white;
+    position: absolute;
+    font-size: 24px;
+    top: 96px;
+    letter-spacing: 1px;
     left: 0;
     @include mixins.desktop {
         left: 50%;

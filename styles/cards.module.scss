@@ -6,7 +6,7 @@
     grid-template-columns: 1fr;
     gap: variables.$spacing;
     @include mixins.desktop {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 

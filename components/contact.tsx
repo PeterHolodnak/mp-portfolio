@@ -1,9 +1,9 @@
 import styles from "../styles/contact.module.scss";
 
 export default function Contact() {
-    const mail = "mail@mail.mail";
-    const phone = "+4219 123 456 789";
-    const facebook = "somefb";
+    const mail = "info@bazeny-minab.sk";
+    const phone = "+421 908 468 900";
+    const facebook = "bazenyMINAB";
     return (
         <section className="container floor">
             <div className={styles.contact}>
@@ -21,7 +21,7 @@ export default function Contact() {
                     <div className={styles.rowFlex}>
                         <img
                             src="/images/icons/phone.png"
-                            alt="Telefon"
+                            alt="Telefón"
                             width="50"
                             height="50"
                         />
@@ -43,11 +43,15 @@ export default function Contact() {
                     <h1>Fakturačné údaje</h1>
                     <div className={styles.row}>
                         <div className={styles.title}>Názov firmy</div>
-                        <div>Michal Palenčar - MINAB kuchyne na mieru</div>
+                        <div>Michal Palenčar - MINAB</div>
                     </div>
                     <div className={styles.row}>
                         <div className={styles.title}>IČO</div>
                         <div>53614461</div>
+                    </div>
+                    <div className={styles.row}>
+                        <div className={styles.title}>IČ DPH</div>
+                        <div>SK1080077746</div>
                     </div>
                     <div className={styles.row}>
                         <div className={styles.title}>Sídlo</div>
