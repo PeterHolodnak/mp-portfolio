@@ -61,7 +61,7 @@
     a {
         display: block;
         padding: 16px 24px;
-        border-bottom: 1px solid variables.$brown;
+        border-bottom: 1px solid variables.$blue;
         text-align: center;
         @include mixins.desktop {
             border-bottom: none;
@@ -89,7 +89,7 @@
         position: relative;
         top: 0;
         height: 4px;
-        background-color: variables.$brown;
+        background-color: variables.$blue;
         margin-bottom: 12px;
         transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width,
             0.3s ease right;

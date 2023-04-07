@@ -32,13 +32,13 @@
         height: 100%;
         background-image: linear-gradient(
             135deg,
-            variables.$brown 0%,
+            variables.$blue 0%,
             #ffffff00 80%
         );
         @include mixins.desktop {
             background-image: linear-gradient(
                 180deg,
-                variables.$brown 0%,
+                variables.$blue 0%,
                 #ffffff00 80%
             );
         }
