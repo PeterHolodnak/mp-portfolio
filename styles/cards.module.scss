@@ -10,6 +10,18 @@
     }
 }
 
+.count5 {
+    @include mixins.desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: calc(variables.$spacing * 2);
+        > * {
+            flex: 30% 1 0;
+        }
+    }
+}
+
 .card {
     font-size: 16px;
     display: flex;

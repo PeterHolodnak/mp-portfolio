@@ -1,4 +1,4 @@
-import CategoryCards from "../components/category-cards";
+import Cards from "../components/cards";
 import Contact from "../components/contact";
 import HeroBanner from "../components/hero-banner";
 
@@ -7,29 +7,32 @@ export default function Sluzby() {
         <>
             <HeroBanner
                 text="Služby"
-                image="/images/gallery/pools/baz-samp.webp"
+                // image="/images/gallery/pools/baz-samp.webp"
+                image="/images/gallery/roofs/uni-2.webp"
+                objectPositionY={65}
+                negativeMargin={false}
             />
-            <CategoryCards
+            <Cards
                 items={[
                     {
                         title: "Servis",
-                        image: "/images/gallery/pools/baz-samp.webp",
+                        imageUrl: "/images/cards/maintenance.png",
                     },
                     {
                         title: "Zazimovanie",
-                        image: "/images/gallery/pools/baz-samp.webp",
+                        imageUrl: "/images/cards/winter.svg",
                     },
                     {
                         title: "Odzimovanie",
-                        image: "/images/gallery/pools/baz-samp.webp",
+                        imageUrl: "/images/cards/summer.svg",
                     },
                     {
                         title: "Čistenie bazénov",
-                        image: "/images/gallery/pools/baz-samp.webp",
+                        imageUrl: "/images/cards/cleaning.svg",
                     },
                     {
                         title: "Celoročná starostlivosť o kvalitu vody",
-                        image: "/images/gallery/pools/baz-samp.webp",
+                        imageUrl: "/images/cards/water.svg",
                     },
                 ]}
             />

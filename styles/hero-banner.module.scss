@@ -12,6 +12,13 @@
     + * {
         z-index: 1;
     }
+
+    &.withoutMargin {
+        margin-bottom: calc(variables.$floor-spacing - 16px);
+        @include mixins.desktop {
+            margin-bottom: variables.$floor-spacing;
+        }
+    }
 }
 
 .bg {
