@@ -41,12 +41,16 @@ export default function Gallery(props: GalleryProps) {
                 );
         }
 
-        return imagesContext
+        console.log("context", imagesContext?.keys());
+        const images = imagesContext
             ?.keys()
+            ?.filter((x) => !x.startsWith("public/"))
             ?.map(
                 (name) =>
                     `/images/gallery/${props.section}/${name.replace("./", "")}`
             );
+        console.log("images", images);
+        return images;
     }, [props.section]);
 
     const [emblaCarousel, embla] = useEmblaCarousel({
