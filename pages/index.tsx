@@ -17,7 +17,7 @@ const Home: NextPage = () => {
                     },
                     {
                         title: "Cenová ponuka",
-                        text: "Šitá na mieru Vaším potrebám",
+                        text: "Šitá na mieru Vašim potrebám",
                         imageUrl: "/images/cards/price.svg",
                     },
                     {
