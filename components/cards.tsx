@@ -26,11 +26,10 @@ export default function Cards({ items }: { items: CardProps[] }) {
                         <img
                             src={item.imageUrl}
                             alt=""
-                            className={styles.image}
                             width="60"
                             height="60"
                         />
-                        <h2>{item.title}</h2>
+                        <h2 className={styles.title}>{item.title}</h2>
                         {item.text && <div>{item.text}</div>}
                     </div>
                 ))}
