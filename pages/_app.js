@@ -12,6 +12,7 @@ const Layout = ({ children }) => {
                     name="description"
                     content="Bazény na mieru, betónové bazény, zastrešenia"
                 />
+                <meta property="og:image" content="/images/meta/baz-8.webp" />
                 <link
                     rel="apple-touch-icon"
                     sizes="180x180"
