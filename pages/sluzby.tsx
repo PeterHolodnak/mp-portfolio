@@ -7,7 +7,6 @@ export default function Sluzby() {
         <>
             <HeroBanner
                 text="Služby"
-                // image="/images/gallery/pools/baz-samp.webp"
                 image="/images/gallery/roofs/uni-2.webp"
                 objectPositionY={65}
                 negativeMargin={false}

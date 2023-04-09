@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import styles from "../styles/hero-banner.module.scss";
 
 type HeroBannerProps = {
@@ -10,12 +11,18 @@ type HeroBannerProps = {
 };
 
 export default function HeroBanner(props: HeroBannerProps) {
+    const wrapperClassName = useMemo(() => {
+        let result = styles.wrapper;
+
+        if (props.negativeMargin === false) {
+            result += ` ${styles.withoutMargin}`;
+        }
+
+        return result;
+    }, [props.negativeMargin]);
+
     return (
-        <section
-            className={`${styles.wrapper} ${
-                props.negativeMargin === false ? styles.withoutMargin : ""
-            }`}
-        >
+        <section className={wrapperClassName}>
             <div className={styles.bg}>
                 <img
                     src={props.image}

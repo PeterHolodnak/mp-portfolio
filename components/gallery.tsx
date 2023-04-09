@@ -41,15 +41,13 @@ export default function Gallery(props: GalleryProps) {
                 );
         }
 
-        console.log("context", imagesContext?.keys());
         const images = imagesContext
             ?.keys()
-            ?.filter((x) => !x.startsWith("public/"))
+            ?.filter((x) => !x.startsWith("public/")) // was containing duplicate path for each image (this one could not be resolved to a working image)
             ?.map(
                 (name) =>
                     `/images/gallery/${props.section}/${name.replace("./", "")}`
             );
-        console.log("images", images);
         return images;
     }, [props.section]);
 
