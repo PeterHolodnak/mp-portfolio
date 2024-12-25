@@ -33,6 +33,7 @@ export default function HeaderNavigation() {
                     <Link href="/technologie">Technológie</Link>
                     <Link href="/sluzby">Služby</Link>
                     <Link href="/kontakt">Kontakt</Link>
+                    <Link href="/cookies">Cookies</Link>
                 </div>
                 <button
                     type="button"

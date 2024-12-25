@@ -1,6 +1,6 @@
 import Head from "next/head";
 import HeaderNavigation from "../components/header-navigation";
-
+import Cookies from "../components/cookies";
 import "../styles/globals.scss";
 
 const Layout = ({ children }) => {
@@ -34,6 +34,7 @@ const Layout = ({ children }) => {
             </Head>
             <HeaderNavigation />
             <main className="main">{children}</main>
+            <Cookies />
         </>
     );
 };

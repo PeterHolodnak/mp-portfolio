@@ -1,0 +1,42 @@
+@use "/styles/mixins";
+@use "/styles/variables";
+
+.cookies {
+    h2 {
+        color: variables.$blue;
+    }
+
+    a {
+        color: variables.$blue;
+        text-decoration: underline;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+// overrides for @palmabit/react-cookie-law component
+.cookieBanner {
+    top: auto !important;
+    bottom: 0 !important;
+    background-color: rgb(221, 221, 221) !important;
+
+    label {
+        color: black !important;
+        padding-left: 28px !important;
+    }
+
+    a {
+        color: variables.$blue !important;
+        margin-left: 0 !important;
+    }
+
+    button {
+        background-color: variables.$blue !important;
+        padding: 16px !important;
+        font-size: 14px !important;
+        border-radius: 8px !important;
+        border: none !important;
+    }
+}
